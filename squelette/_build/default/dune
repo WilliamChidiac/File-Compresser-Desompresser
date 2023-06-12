@@ -1,0 +1,3 @@
+(executable
+ (name huff)
+ (promote (until-clean)))

@@ -1,0 +1,118 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root:
+# /mnt/c/Users/Willi/OneDrive/Desktop/projet-ipf-master/projet-ipf-master/squelette
+# Auto-detected concurrency: 8
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_4a5d52_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path =
+#      Some External "/home/williamchidiac001/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/bin"
+#  ; ocaml = Ok External "/home/williamchidiac001/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/usr/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/usr/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/usr/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/williamchidiac001/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/mnt/c/Users/Willi/OneDrive/Desktop/projet-ipf-master/projet-ipf-master/squelette"
+#        ; "INSIDE_DUNE" :
+#            "/mnt/c/Users/Willi/OneDrive/Desktop/projet-ipf-master/projet-ipf-master/squelette/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/mnt/c/Users/Willi/OneDrive/Desktop/projet-ipf-master/projet-ipf-master/squelette/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/mnt/c/Users/Willi/OneDrive/Desktop/projet-ipf-master/projet-ipf-master/squelette/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/mnt/c/Users/Willi/OneDrive/Desktop/projet-ipf-master/projet-ipf-master/squelette/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/williamchidiac001/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.08.1"
+#      ; standard_library_default = "/usr/lib/ocaml"
+#      ; standard_library = "/usr/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "x86_64-linux-gnu-gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "x86_64-linux-gnu-ld"; "-r"; "-o" ]
+#      ; cc_profile = [ "-pg" ]
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "x86_64-linux-gnu-as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = true
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = false
+#      ; exec_magic_number = "Caml1999X025"
+#      ; cmi_magic_number = "Caml1999I025"
+#      ; cmo_magic_number = "Caml1999O025"
+#      ; cma_magic_number = "Caml1999A025"
+#      ; cmx_magic_number = "Caml1999Y025"
+#      ; cmxa_magic_number = "Caml1999Z025"
+#      ; ast_impl_magic_number = "Caml1999M025"
+#      ; ast_intf_magic_number = "Caml1999N025"
+#      ; cmxs_magic_number = "Caml1999D025"
+#      ; cmt_magic_number = "Caml1999T025"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl huffman.ml) > _build/default/.huff.eobjs/huffman.ml.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w -40 -g -bin-annot -I .huff.eobjs/byte -no-alias-deps -open Dune__exe -o .huff.eobjs/byte/dune__exe__Huffman.cmo -c -impl huffman.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I .huff.eobjs/byte -I .huff.eobjs/native -intf-suffix .ml -no-alias-deps -open Dune__exe -o .huff.eobjs/native/dune__exe__Huffman.cmx -c -impl huffman.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -o huff.exe .huff.eobjs/native/dune__exe.cmx .huff.eobjs/native/dune__exe__Bs.cmx .huff.eobjs/native/dune__exe__Heap.cmx .huff.eobjs/native/dune__exe__Huffman.cmx .huff.eobjs/native/dune__exe__Huff.cmx)
+# Promoting "_build/default/huff.exe" to "huff.exe"
